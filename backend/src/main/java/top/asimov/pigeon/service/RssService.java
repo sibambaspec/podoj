@@ -129,6 +129,9 @@ public class RssService {
     feed.setTitle(title);
     feed.setLink(link);
     feed.setDescription(description);
+    // Declare a valid default language for RSS consumers and AI podcast apps.
+    // Episode transcript tags may override this with their own language.
+    feed.setLanguage("en");
     feed.setPublishedDate(new Date());
 
     FeedInformation feedInfo = new FeedInformationImpl();
